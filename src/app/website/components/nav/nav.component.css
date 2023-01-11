@@ -1,0 +1,101 @@
+.bg-nav{
+    background-color: #383838;
+}
+
+
+.hover-border{
+    position: relative;
+    color: white;
+    
+}
+
+.navbar{
+    border-bottom: #f6e4ad 2px solid;
+}
+
+.hover-border:after{
+    content: "";
+    background-color:#fcff82;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0%; 
+    left: 50%;
+    transition: all 500ms ease;
+}
+
+.hover-border:hover:after{
+    left: 0%;
+    width: 100%;
+}
+
+.hover-border:hover{
+    color:#fcff82;
+    transition: all 500ms;
+}
+
+/* boton nav */
+
+.button-nav{
+    position: relative;
+    background-color: #424242;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 500ms;
+    overflow: hidden;
+}
+
+.button-nav:hover{
+    color: #fcff82;
+
+}
+
+.button-nav span{
+    position: absolute;
+    background: #fcff82;
+    transition: 500ms;
+}
+
+.button-nav span:nth-child(1){
+    width: 100%;
+    height: 1px;
+    top: 0;
+    left: -100%;
+}
+
+.button-nav span:nth-child(2){
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: -100%;
+}
+
+.button-nav span:nth-child(3){
+    width: 1px;
+    height: 100%;
+    bottom: -100%;
+    left: 0;
+}
+
+.button-nav span:nth-child(4){
+    width: 1px;
+    height: 100%;
+    top: -100%;
+    right: 0;
+}
+
+.button-nav:hover span:nth-child(1){
+    left: 0;
+}
+.button-nav:hover span:nth-child(2){
+    right: 0;
+}
+.button-nav:hover span:nth-child(3){
+    bottom: 0;
+}
+.button-nav:hover span:nth-child(4){
+    top: 0;
+}

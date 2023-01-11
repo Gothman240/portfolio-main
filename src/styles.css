@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+#trash{
+    color: red;
+    padding: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#trash:hover{
+    background: rgba(241, 5, 34, 0.2);
+    border-radius: 150px;
+    transition: 800ms;
+}
+
+#pencil{
+    padding: 8px;
+    margin: 4px;
+    color: #000;
+    cursor: pointer;
+}
+
+#pencil:hover{
+    background: rgba(126, 211, 33, 0.2);
+    border-radius: 150px;
+    transition: 800ms;    
+}
+
+#plus{
+    cursor: pointer;
+    display: inline-block;
+    transition: all 500ms;
+}
+
+#plus:hover{
+    transform: rotate(90deg) scale(1.5);
+    color: #ff9a3c;
+}

@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="form-group mb-3">
+                  <label for="nombreE" class="form-label">Name</label>
+                  <input type="text" name="nombreE" id="nombreE" class="form-control" placeholder="" [(ngModel)]="nombreE" required>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label for="descripcionE" class="form-label">Descripción</label>
+                    <input type="text" name="descripcionE" id="descripcionE" class="form-control" placeholder="" [(ngModel)]="descripcionE" required>
+                </div>
+                <button class="btn btn-success" type="submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>

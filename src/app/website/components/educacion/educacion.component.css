@@ -1,0 +1,24 @@
+.hex-about {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 105px;
+    height: 110px;
+    background-color:#ff9a3c;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    
+}
+
+.fa-graduation-cap {
+    transform: scale(2.5);
+    color: #fff;
+}
+
+
+
+
+
+
+

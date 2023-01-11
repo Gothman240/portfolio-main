@@ -1,0 +1,39 @@
+
+/* formulario */
+
+.cont-formulario form {
+    max-width: 700px;
+    margin: auto;
+}
+
+.cont-formulario {
+    background-color: #424242;
+    color: whitesmoke;
+    outline: none;
+
+}
+
+.cont-formulario input {
+    background-color: #383838;
+    outline: none;
+    color: whitesmoke;
+}
+
+.cont-formulario textarea {
+    background-color: #383838;
+    outline: none;
+    color: whitesmoke;
+}
+
+/* footer */
+
+.container-footer {
+    background-color: #383838;
+    color: whitesmoke;
+}
+
+.container-footer div{
+    max-width: 750px;
+    min-height: 100px;
+    margin:auto;
+}

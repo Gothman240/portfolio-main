@@ -1,0 +1,13 @@
+:root{
+    --main-bg:
+  }
+
+input:focus, button:focus {
+    border: 1px solid var(--main-bg) !important;
+    box-shadow: none !important;
+  }
+
+.card, .btn, input{
+    border-radius:0 !important;
+  }
+

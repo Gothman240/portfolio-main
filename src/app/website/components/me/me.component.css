@@ -1,0 +1,15 @@
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.hex {
+    margin: auto;
+    display: flex;
+    width: 240px;
+    height: 245px;
+    background-color: #424242;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+}
