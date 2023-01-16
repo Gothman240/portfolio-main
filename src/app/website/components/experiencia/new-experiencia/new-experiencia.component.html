@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div>
             <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
@@ -15,4 +15,36 @@
             </form>
         </div>
     </div>
-</div>
+</div> -->
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-4 col-md-6 col-sm-6 py-5">
+        <div class="card shadow">
+          <div class="card-title text-center border-bottom">
+            <h2 class="p-3">Nueva experiencia</h2>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                
+              <div class="mb-4 form-group">
+                <label for="nombreE" class="form-label">Titulo</label>
+                <input class="form-control form-control-lg" type="text" class="form-control" id="nombreE"
+                  [(ngModel)]="nombreE" name="nombreE" required />
+              </div>
+              <div class="mb-4 form-group">
+                <label for="descripcionE" class="form-label">Descripcion</label>
+                <input class="form-control form-control-lg" type="text" class="form-control" id="descripcionE"
+                  [(ngModel)]="descripcionE" name="descripcionE" required />
+              </div>
+              
+  
+              <div class="d-grid py-3">
+                <button type="submit" class="btn btn-secondary">Agregar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

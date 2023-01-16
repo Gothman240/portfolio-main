@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+section[id]{
+    scroll-padding-top: 75px;
+};
+
 #trash{
     color: red;
     padding: 8px;
@@ -33,6 +37,8 @@
 }
 
 #plus:hover{
-    transform: rotate(90deg) scale(1.5);
+    transform: scale(1.5);
     color: #ff9a3c;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

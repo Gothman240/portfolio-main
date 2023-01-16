@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/service/persona.service';
 import { TokenService } from 'src/app/service/token.service';
+import * as Aos from 'aos';
 
 @Component({
   selector: 'app-me',
@@ -18,6 +19,8 @@ export class MeComponent implements OnInit {
     private tokenS: TokenService) { }
 
   ngOnInit(): void {
+    Aos.init();
+
     this.cargarPersona();
     if(this.tokenS.getToken()){
       this.isLogged = true;

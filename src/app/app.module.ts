@@ -23,8 +23,8 @@ import { EditEducacionComponent } from './website/components/educacion/edit-educ
 import { EditSkillComponent } from './website/components/skills/edit-skill/edit-skill.component';
 import { NewSkillComponent } from './website/components/skills/new-skill/new-skill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
 
-import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { EditMeComponent } from './website/components/me/edit-me/edit-me.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';

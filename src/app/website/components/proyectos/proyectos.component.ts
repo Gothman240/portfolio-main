@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Proyecto } from 'src/app/model/proyectos';
 import { SProyectoService } from 'src/app/service/s-proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-proyectos',
@@ -17,6 +18,7 @@ export class ProyectosComponent implements OnInit {
     private token: TokenService){}
 
   ngOnInit(): void {
+    AOS.init({disable: window.innerWidth <800});
     this.cargarProyectos();
     if(this.token.getToken()){
       this.isLogged=true;

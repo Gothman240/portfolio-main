@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
 import { SSkillService } from 'src/app/service/s-skill.service';
 import { TokenService } from 'src/app/service/token.service';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-skills',
@@ -10,7 +11,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
-
+  
   skill: Skill [] = [];
   isLogged= false;
 
@@ -21,6 +22,7 @@ export class SkillsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    AOS.init({disable: window.innerWidth <700});
     this.cargarSkills();
     if(this.token.getToken()){
       this.isLogged=true;

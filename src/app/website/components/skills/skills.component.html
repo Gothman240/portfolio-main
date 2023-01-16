@@ -1,10 +1,9 @@
-<i routerLink="/nuevaskill" *ngIf="isLogged" class="bi bi-plus">¿Nueva skill?</i>
+<section id="skill" data-aos="fade-left" data-aos-delay="1000" *ngFor="let skill of skill">
+    <h3 class="ml-auto">
+        ¿Nueva Skill?
+        <i routerLink="/nuevaskill" *ngIf="isLogged" class="bi bi-plus"></i>
+    </h3>
 
-
-
-
-
-<div *ngFor="let skill of skill">
     <div class="float-end">{{skill.porcentaje}}%</div>
     <div class="d-inline-flex">
         <div class="">{{skill.nombre}}</div>
@@ -20,15 +19,14 @@
 
     </div>
 
-
-
+    
+    
     <div class="progress progress-bar-animated mb-3" style="height: 20px">
         <div class="progress-bar" [ngClass]="skill.color" role="progressbar" [ngStyle]="{'width.%': skill.porcentaje}"
-            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-        </div>
+            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">{{skill.nombre}}
+        </div>{{skill.porcentaje}}%
 
     </div>
 
-
-
-</div>
+    
+</section>
