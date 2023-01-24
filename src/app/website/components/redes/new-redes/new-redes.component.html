@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-6 py-5">
+      <div class="card shadow">
+        <div class="card-title text-center border-bottom">
+          <h2 class="p-3">Nueva red social</h2>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="mb-4 form-group">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                class="form-control"
+                id="nombre"
+                [(ngModel)]="nombre"
+                name="nombre"
+                required
+              />
+            </div>
+            <div class="mb-4 form-group">
+              <label for="url" class="form-label">Link</label>
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                class="form-control"
+                id="url"
+                [(ngModel)]="url"
+                name="url"
+                required
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="iconRedes" class="form-label"
+                >Icono: <i [class]="iconRedes"></i></label
+              >
+              <select
+                class="form-select form-select-lg"
+                name="iconRedes"
+                id="iconRedes"
+                [(ngModel)]="iconRedes"
+              >
+                <option selected>Eliga un icono</option>
+                <option value="fa-brands fa-facebook">Facebook</option>
+                <option value="fa-brands fa-github">GitHub</option>
+                <option value="fa-brands fa-instagram">Instagram</option>
+                <option value="fa-brands fa-linkedin">Linkedin</option>
+                <option value="fa-brands fa-telegram">Telegram</option>
+                <option value="fa-brands fa-twitter">Twitter</option>
+              </select>
+            </div>
+
+            <div class="d-grid py-3">
+              <button type="submit" class="btn btn-secondary">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

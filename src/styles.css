@@ -1,44 +1,46 @@
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 /* You can add global styles to this file, and also import other style files */
 
-section[id]{
-    scroll-padding-top: 75px;
-};
-
-#trash{
-    color: red;
-    padding: 8px;
-    margin-top: 8px;
-    cursor: pointer;
+section[id] {
+  scroll-padding-top: 75px;
 }
 
-#trash:hover{
-    background: rgba(241, 5, 34, 0.2);
-    border-radius: 150px;
-    transition: 800ms;
+#trash {
+  padding: 8px;
+  margin: 4px;
+  color: red;
+  cursor: pointer;
+  transition: all 500ms;
 }
 
-#pencil{
-    padding: 8px;
-    margin: 4px;
-    color: #000;
-    cursor: pointer;
+#trash:hover {
+  background: rgba(241, 5, 34, 0.2);
+  border-radius: 150px;
 }
 
-#pencil:hover{
-    background: rgba(126, 211, 33, 0.2);
-    border-radius: 150px;
-    transition: 800ms;    
+#pencil {
+  padding: 8px;
+  margin: 4px;
+  color: #000;
+  cursor: pointer;
+  transition: all 500ms;
 }
 
-#plus{
-    cursor: pointer;
-    display: inline-block;
-    transition: all 500ms;
+#pencil:hover {
+  background: rgba(126, 211, 33, 0.2);
+  border-radius: 150px;
 }
 
-#plus:hover{
-    transform: scale(1.5);
-    color: #ff9a3c;
+#plus {
+  cursor: pointer;
+  display: inline-block;
+  transition: all 500ms;
 }
-html, body { height: 100%; }
+
+#plus:hover {
+  transform: scale(1.5);
+  color: #ff9a3c;
+}
+/* html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+ */

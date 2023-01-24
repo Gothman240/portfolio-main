@@ -16,6 +16,7 @@ export class NewProyectoComponent implements OnInit{
   descrpcion: string;
   link: string;
   imgP: string;
+  gitLink: string;
 
   constructor(private proyectoService: SProyectoService,
     private router: Router,
@@ -28,7 +29,7 @@ export class NewProyectoComponent implements OnInit{
   }
 
   onCreate():void{
-    const proyecto = new Proyecto(this.nombre, this.descrpcion, this.link, this.imgP);
+    const proyecto = new Proyecto(this.nombre, this.descrpcion, this.link, this.imgP, this.gitLink);
     this.proyectoService.save(proyecto).subscribe(()=>{
       alert("Proyecto agregado");
       this.router.navigate(['']);

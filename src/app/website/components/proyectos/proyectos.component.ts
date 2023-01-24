@@ -11,6 +11,7 @@ import * as AOS from 'aos';
 })
 export class ProyectosComponent implements OnInit {
 
+
   proyecto: Proyecto [] = [];
   isLogged = false; 
 

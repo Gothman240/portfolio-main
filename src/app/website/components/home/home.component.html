@@ -1,47 +1,22 @@
-    <app-hero></app-hero>
-
-
-
-<div class="container">
-    
-    <app-educacion></app-educacion>
-    <app-experiencia></app-experiencia>
-</div>
-
-
-
-
-
+<app-hero></app-hero>
+<app-nav></app-nav>
+<app-educacion></app-educacion>
+<app-experiencia></app-experiencia>
 
 <section id="SobreMi" class="container pt-5 pb-5 text-center">
-    <div  class="row justify-content-center align-items-center g-2">
-        <h1 data-aos="fade-right" class="my-5">
-            Sobre mí
-
-        </h1>
-
-        
-
-    </div>
-
+  <div class="row justify-content-center align-items-center g-2">
+    <h1 data-aos="fade-right" class="my-5">Sobre mí</h1>
+  </div>
 </section>
 
 <div class="container">
+  <div class="row justify-content-center">
+    <app-me class="col-12 col-md-6"></app-me>
 
-    <div class="row justify-content-center ">
-        <app-me class="col-12 col-md-6"></app-me>
-        
-        <!-- progressbar -->
-        <app-skills class="col-12 col-md-6"></app-skills>
-       
-    </div>
-   
-    <app-proyectos></app-proyectos>
+    <!-- progressbar -->
+    <app-skills class="col-12 col-md-6"></app-skills>
+  </div>
 
 </div>
-
-
-
-
-
+<app-proyectos></app-proyectos>
 <app-footer></app-footer>

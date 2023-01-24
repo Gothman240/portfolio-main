@@ -2,11 +2,11 @@ export class Skill {
     id: number;
     nombre: string;
     porcentaje: number;
-    color: string;
+    iconSkill: string;
 
-    constructor(nombre: string, porcentaje: number, color: string){
+    constructor(nombre: string, porcentaje: number, iconSkill: string){
         this.nombre = nombre;
         this.porcentaje = porcentaje;
-        this.color = color;
+        this.iconSkill = iconSkill;
     }
 }

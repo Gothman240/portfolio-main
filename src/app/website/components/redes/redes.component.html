@@ -1,0 +1,43 @@
+<div class="row justify-content-center align-items-center">
+  <div *ngIf="isLogged" class="col-12">
+    <h2>
+      Nueva Red
+
+      <i
+        id="plus"
+        routerLink="/nuevared"
+        *ngIf="isLogged"
+        class="bi bi-plus"
+      ></i>
+    </h2>
+  </div>
+  <div class="col" *ngFor="let redes of red">
+    <!-- editar icon -->
+    <i
+      id="pencil"
+      routerLink="/editred/{{ redes.id }}"
+      *ngIf="isLogged"
+      class="bi bi-pencil"
+    ></i>
+    <!-- red -->
+    <a
+      [matTooltip]="redes.nombre"
+      matTooltipPosition="above"
+      [href]="redes.url"
+      target="_blank"
+    >
+    <figure>
+      <i class="pt-1" [ngClass]="redes.iconRedes" style="height: 25px"></i>
+
+    </figure>
+    </a>
+
+    <!-- delete icon -->
+    <i
+      id="trash"
+      (click)="borrarRedes(redes.id)"
+      *ngIf="isLogged"
+      class="bi bi-trash3-fill"
+    ></i>
+  </div>
+</div>

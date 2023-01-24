@@ -23,7 +23,7 @@ import { EditEducacionComponent } from './website/components/educacion/edit-educ
 import { EditSkillComponent } from './website/components/skills/edit-skill/edit-skill.component';
 import { NewSkillComponent } from './website/components/skills/new-skill/new-skill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { EditMeComponent } from './website/components/me/edit-me/edit-me.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -32,6 +32,9 @@ import { provideStorage,getStorage } from '@angular/fire/storage';
 import { ProyectosComponent } from './website/components/proyectos/proyectos.component';
 import { NewProyectoComponent } from './website/components/proyectos/new-proyecto/new-proyecto.component';
 import { EditProyectoComponent } from './website/components/proyectos/edit-proyecto/edit-proyecto.component';
+import { RedesComponent } from './website/components/redes/redes.component';
+import { NewRedesComponent } from './website/components/redes/new-redes/new-redes.component';
+import { EditRedesComponent } from './website/components/redes/edit-redes/edit-redes.component';
 
 
 
@@ -58,6 +61,9 @@ import { EditProyectoComponent } from './website/components/proyectos/edit-proye
     ProyectosComponent,
     NewProyectoComponent,
     EditProyectoComponent,
+    RedesComponent,
+    NewRedesComponent,
+    EditRedesComponent,
     
   ],
   imports: [
@@ -66,7 +72,7 @@ import { EditProyectoComponent } from './website/components/proyectos/edit-proye
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatProgressBarModule,
+    MatTooltipModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],

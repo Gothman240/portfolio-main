@@ -1,26 +1,67 @@
 <div class="container">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
-                <!-- ========== nombre ========== -->
-                
-                <div class="form-group mb-3">
-                    <label for="nombreS" class="form-label">Nueva Skill</label>
-                    <input type="text" name="nombreS" id="nombreS" class="form-control" placeholder="" [(ngModel)]="nombreS" required>
-                </div>
-                <!-- ========== porcentaje ========== -->
-
-                <div class="form-group mb-3">
-                    <label for="porcentajeS" class="form-label">Porcentaje</label>
-                    <input type="text" name="porcentajeS" id="porcentajeS" class="form-control" placeholder="" [(ngModel)]="porcentajeS" required>
-                </div>
-                <!-- ========== color ========== -->
-                <div class="form-group mb-3">
-                    <label for="color" class="form-label">color</label>
-                    <input type="text" name="color" id="color" class="form-control" placeholder="" [(ngModel)]="color" required>
-                </div>
-                <button class="btn btn-success" type="submit">Guardar</button>
-            </form>
+  <div class="row justify-content-center mt-5">
+    <div class="col-lg-4 col-md-6 col-sm-6 py-5">
+      <div class="card shadow">
+        <div class="card-title text-center border-bottom">
+          <h2 class="p-3">Nueva skill</h2>
         </div>
+        <div class="card-body">
+          <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="form-group mb-3">
+              <label for="nombreS" class="form-label">Nueva Skill</label>
+              <input
+                type="text"
+                name="nombreS"
+                id="nombreS"
+                class="form-control"
+                placeholder=""
+                [(ngModel)]="nombreS"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="porcentajeS" class="form-label">Porcentaje</label>
+              <input
+                type="number"
+                min="0"
+                max="100"
+                name="porcentajeS"
+                id="porcentajeS"
+                class="form-control"
+                placeholder=""
+                [(ngModel)]="porcentajeS"
+                required
+              />
+            </div>
+            <div class="form-group mb-3">
+              <label for="iconSkill" class="form-label"
+                >Icono(<i [class]="iconSkill"></i>)</label
+              >
+              <select
+                class="form-select form-select-lg"
+                name="iconSkill"
+                id="iconSkill"
+                [(ngModel)]="iconSkill"
+              >
+                <option selected>Eliga un icono</option>
+                <option value="fa-brands fa-android">Android</option>
+                <option value="fa-brands fa-angular">Angular</option>
+                <option value="fa-brands fa-bootstrap">Bootstrap</option>
+                <option value="fa-brands fa-css3-alt">Css</option>
+                <option value="fa-brands fa-html5">Html</option>
+                <option value="fa-brands fa-java">Java</option>
+                <option value="fa-brands fa-js">Js</option>
+                <option value="fa-brands fa-react">React</option>
+                <option value="fa-brands fa-vuejs">Vue</option>
+              </select>
+            </div>
+
+            <div class="d-grid py-3">
+              <button type="submit" class="btn btn-secondary">Agregar</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </div>

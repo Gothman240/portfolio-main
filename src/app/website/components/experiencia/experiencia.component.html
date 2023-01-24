@@ -1,33 +1,47 @@
-<section id="exp" class="row justify-content-center align-items-center text-center g-2">
+<section id="exp" class="container">
+  <div class="row justify-content-center align-items-center text-center g-2">
+    <h1 data-aos="fade-left" class="col-12 my-5">
+      Experiencia laboral
 
-  <h1 data-aos="fade-left" class="col-12 my-5">Experiencia laboral
+      <i
+        id="plus"
+        routerLink="/nuevaexp"
+        *ngIf="isLogged"
+        class="bi bi-plus"
+      ></i>
+    </h1>
 
-    <i id="plus" routerLink="/nuevaexp" *ngIf="isLogged" class="bi bi-plus"></i>
-
-  </h1>
-
-
-  <div data-aos="fade-up" data-aos-delay="1000" class="col-6 col-lg-3 h-100 pt-5" *ngFor="let experiencia of exp">
-
-    <div class="hex-about">
-      <i class="fa-solid fa-briefcase"></i>
-    </div>
-
-    <h2>{{experiencia.nombreE}}
-
-      <div class="icon-box">
-
-        <!-- editar icon -->
-        <i id="pencil" routerLink="/editexp/{{experiencia.id}}" *ngIf="isLogged" class="bi bi-pencil"></i>
-        <!-- delete icon -->
-        <i id="trash" (click)="delete(experiencia.id)" *ngIf="isLogged" class="bi bi-trash3-fill"></i>
-
+    <div
+      data-aos="fade-up"
+      data-aos-delay="1000"
+      class="col-6 col-lg-3 h-100 pt-5"
+      *ngFor="let experiencia of exp"
+    >
+      <div class="hex-about">
+        <i class="fa-solid fa-briefcase"></i>
       </div>
 
-    </h2>
-    <p>{{experiencia.descripcionE}}</p>
+      <h2>
+        {{ experiencia.nombreE }}
 
-
+      </h2>
+      <div class="icon-box">
+        <!-- editar icon -->
+        <i
+          id="pencil"
+          routerLink="/editexp/{{ experiencia.id }}"
+          *ngIf="isLogged"
+          class="bi bi-pencil"
+        ></i>
+        <!-- delete icon -->
+        <i
+          id="trash"
+          (click)="delete(experiencia.id)"
+          *ngIf="isLogged"
+          class="bi bi-trash3-fill"
+        ></i>
+      </div>
+      <p>{{ experiencia.descripcionE }}</p>
+    </div>
   </div>
-
 </section>
