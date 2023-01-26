@@ -15,7 +15,7 @@
                 id="nombreS"
                 class="form-control"
                 placeholder=""
-                [(ngModel)]="nombreS"
+                [(ngModel)]="nombre"
                 required
               />
             </div>
@@ -29,19 +29,19 @@
                 id="porcentajeS"
                 class="form-control"
                 placeholder=""
-                [(ngModel)]="porcentajeS"
+                [(ngModel)]="porcentaje"
                 required
               />
             </div>
             <div class="form-group mb-3">
-              <label for="iconSkill" class="form-label"
-                >Icono(<i [class]="iconSkill"></i>)</label
+              <label for="iconskill" class="form-label"
+                >Icono(<i [class]="iconskill"></i>)</label
               >
               <select
                 class="form-select form-select-lg"
-                name="iconSkill"
-                id="iconSkill"
-                [(ngModel)]="iconSkill"
+                name="iconskill"
+                id="iconskill"
+                [(ngModel)]="iconskill"
               >
                 <option selected>Eliga un icono</option>
                 <option value="fa-brands fa-android">Android</option>

@@ -11,16 +11,32 @@
                 <h1 class="pb-5">Contacto</h1>
             </div>
             <div data-aos="zoom-out-up" data-aos-delay="800" class="col-12 pt-4 pb-5">
+
                 <form target="_blank" action="https://formsubmit.co/paez.federico96@gmail.com"
                 method="post">
-                    <input class="form-control form-control-sm mb-1 border-0" type="email" name="email" placeholder="Email"
-                        aria-label=".form-control-sm example" required>
-                    <input class="form-control form-control-sm mb-1 border-0" type="text" name="name" placeholder="Name"
-                        aria-label=".form-control-sm example" required>
 
-                    <textarea class="form-control mb-3 border-0" name="message" placeholder="Tu mensaje"
-                        id="exampleFormControlTextarea1" rows="3" required></textarea>
+                    <div class="form-floating">
+                        <input class="form-control form-control-sm mb-1 border-0" type="email" name="email" placeholder="Email"
+                            aria-label="form-control-sm example" required>
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <input class="form-control form-control-sm mb-1 border-0" type="text" name="name" placeholder="Name"
+                            aria-label="form-control-sm example" required>
+                        <label for="name">Nombre</label>
+                    </div>
+
+                    <div class="form-floating">
+
+                        <textarea class="form-control mb-3 border-0" name="message" placeholder="Tu mensaje"
+                            id="exampleFormControlTextarea1" rows="3" required></textarea>
+                            <label for="message">Tu Mensaje</label>
+                    </div>
+                    
+
                     <button  class="btn btn-outline-light float-end" type="submit">Enviar</button>
+
                 </form>
             </div>
 

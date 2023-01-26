@@ -10,9 +10,9 @@ import { SSkillService } from 'src/app/service/s-skill.service';
 })
 export class NewSkillComponent implements OnInit {
 
-  nombreS:string;
-  porcentajeS: number;
-  iconSkill: string;
+  nombre:string;
+  porcentaje: number;
+  iconskill: string;
 
 
   constructor(
@@ -24,7 +24,7 @@ export class NewSkillComponent implements OnInit {
   }
 
   onCreate():void{
-    const skill = new Skill(this.nombreS, this.porcentajeS, this.iconSkill);
+    const skill = new Skill(this.nombre, this.porcentaje, this.iconskill);
     this.skillServ.save(skill).subscribe(data =>{
       alert("Skill creada correctamente");
       this.router.navigate(['']);

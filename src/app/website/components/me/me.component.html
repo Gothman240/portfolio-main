@@ -1,23 +1,17 @@
 <div data-aos="fade-right" data-aos-delay="1000" class="text-center">
   <div class="hex">
-    <img
-      src="https://images.pexels.com/photos/1421264/pexels-photo-1421264.jpeg?cs=srgb&dl=aerial-aerial-photo-aerial-photography-1421264.jpg&fm=jpg"
-      alt="some"
-    />
+    <img src="{{ persona.img }}" alt="some" />
   </div>
 
   <div class="icon-box">
     <!-- editar icon -->
-    <i
-      id="pencil"
-      routerLink="/editacercade/1"
-      *ngIf="isLogged"
-      class="bi bi-pencil"
-    ></i>
+    <button id="pencil" class="btn btn-success">
+      <i routerLink="/editacercade/1" *ngIf="isLogged" class="bi bi-pencil"></i>
+    </button>
   </div>
 
   <div class="pt-3 pb-3">
-    <h3>{{ persona?.nombre }} {{ persona?.apellido }}</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, quod.</p>
+    <h3>{{ persona.nombre }} {{ persona.apellido }}</h3>
+    <p>{{ persona.descripcion }}</p>
   </div>
 </div>

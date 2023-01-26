@@ -21,7 +21,7 @@ export class ExperienciaComponent implements OnInit {
 
 
   ngOnInit(): void {
-    AOS.init({disable: 'mobile'});
+    AOS.init({disable: window.innerWidth < 800});
     
     this.cargarExp();
 

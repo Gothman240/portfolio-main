@@ -33,7 +33,7 @@ export class RedesComponent implements OnInit {
   borrarRedes(id: number) {
     if (id != undefined) {
       this.Sredes.detele(id).subscribe(() => {
-        this.cargarRedes;
+        this.cargarRedes();
       });
     }
   }

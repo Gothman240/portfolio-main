@@ -7,6 +7,7 @@ import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/s
 export class ImageService {
 
   url: string = "";
+  imgRef: string = "";
 
   constructor(private fireStorage: Storage) { }
 
@@ -18,7 +19,8 @@ export class ImageService {
     const imgRef = ref(this.fireStorage, `imagen/` + name)
 
     uploadBytes(imgRef, file)
-      .then(response => { this.getImages() })
+      .then(response => {this.imgRef = response.ref.fullPath;
+        this.getImages() })
       .catch(error => console.log(error))
   }
 
@@ -27,7 +29,9 @@ export class ImageService {
     list(imagesRef)
       .then(async response => {
         for (let item of response.items) {
+          if(this.imgRef == item.fullPath){
           this.url = await getDownloadURL(item);
+          }
         }
       })
       .catch(error => console.log(error));

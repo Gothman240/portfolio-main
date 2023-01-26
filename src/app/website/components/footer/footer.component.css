@@ -15,14 +15,18 @@
 
 .cont-formulario input {
     background-color: #383838;
+    height: 48px;
     outline: none;
-    color: whitesmoke;
+    color: #fff;
 }
+
+
 
 .cont-formulario textarea {
     background-color: #383838;
+    height: 240px;
     outline: none;
-    color: whitesmoke;
+    color: #fff;
 }
 
 /* footer */

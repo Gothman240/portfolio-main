@@ -22,7 +22,7 @@ export class SkillsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    AOS.init({disable: window.innerWidth <700});
+    AOS.init({disable: window.innerWidth <800});
     this.cargarSkills();
     if(this.token.getToken()){
       this.isLogged=true;
