@@ -15,11 +15,10 @@ export class ImageService {
 
   public uploadImg($event: any, name: string) {
     const file = $event.target.files[0]
-
     const imgRef = ref(this.fireStorage, `imagen/` + name)
-
     uploadBytes(imgRef, file)
-      .then(response => {this.imgRef = response.ref.fullPath;
+      .then(response => {
+        this.imgRef = response.ref.fullPath;
         this.getImages() })
       .catch(error => console.log(error))
   }

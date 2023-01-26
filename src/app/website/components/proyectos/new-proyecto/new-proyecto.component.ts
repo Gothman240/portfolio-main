@@ -12,11 +12,12 @@ import { SProyectoService } from 'src/app/service/s-proyecto.service';
 })
 export class NewProyectoComponent implements OnInit{
 
-  nombre: string;
-  descrpcion: string;
-  link: string;
-  imgP: string;
-  gitLink: string;
+
+  nombre: string ="" ;
+  descrpcion: string ="";
+  link: string ="";
+  imgP: string ="";
+  gitLink: string ="";
 
   constructor(private proyectoService: SProyectoService,
     private router: Router,
@@ -26,22 +27,31 @@ export class NewProyectoComponent implements OnInit{
 
   ngOnInit(): void {
     this.imgProyectoS.url = "";
+
   }
 
   onCreate():void{
+    this.imgP = this.imgProyectoS.url;
     const proyecto = new Proyecto(this.nombre, this.descrpcion, this.link, this.imgP, this.gitLink);
     this.proyectoService.save(proyecto).subscribe(()=>{
       alert("Proyecto agregado");
       this.router.navigate(['']);
     }, err =>{
       alert("Error al agregar el proyecto");
-      this.router.navigate(['']);
     })
   }
 
   uploadImg($event: any){
-    const id = this.actiRouter.snapshot.params['id'];
-    const name = "proyecto_" + this.nombre;
+    const name = "proyecto_" + this.imgP;
     this.imgProyectoS.uploadImg($event, name);
   }
+
+  /*uploadImg($event:any){
+    if($event.target.files[0] == null){
+      this.imgProyectoS.url = this.imgP;
+    }else {
+      const name = "proyecto_" + this.imgP;
+      this.imgProyectoS.uploadImg($event, name);
+    }
+  } */
 }
