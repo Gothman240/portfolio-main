@@ -24,25 +24,23 @@
         <i class="fa-solid fa-graduation-cap"></i>
       </div>
 
-      
       <h2>{{ Educacion.nombreE }}</h2>
       <p>{{ Educacion.descripcionE }}</p>
-      <p><i>{{ Educacion.fechaE }}</i></p>
+      <p>
+        <i>{{ Educacion.fechaE }}</i>
+      </p>
       <!-- editar icon -->
-      <button id="pencil" type="button" class="btn btn-success">
-        <i
-          routerLink="/editedu/{{ Educacion.id }}"
-          *ngIf="isLogged"
-          class="bi bi-pencil"
-        ></i>
+      <button
+        *ngIf="isLogged"
+        id="pencil"
+        type="button"
+        class="btn btn-success"
+      >
+        <i routerLink="/editedu/{{ Educacion.id }}" class="bi bi-pencil"></i>
       </button>
       <!-- delete icon -->
-      <button id="trash" type="button" class="btn btn-danger">
-        <i
-          (click)="borrar(Educacion.id)"
-          *ngIf="isLogged"
-          class="bi bi-trash3-fill"
-        ></i>
+      <button *ngIf="isLogged" id="trash" type="button" class="btn btn-danger">
+        <i (click)="borrar(Educacion.id)" class="bi bi-trash3-fill"></i>
       </button>
     </div>
   </div>

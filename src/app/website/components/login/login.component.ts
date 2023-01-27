@@ -1,6 +1,7 @@
 import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
@@ -23,14 +24,24 @@ export class LoginComponent implements OnInit {
   constructor(
     private tokenService: TokenService,
     private authService: AuthService,
-    private router: Router) { }
+    private router: Router,
+    private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    this.showInfo();
     if (this.tokenService.getToken()) {
       this.isLogged = true;
       this.isLogginFail = false;
       this.roles = this.tokenService.getAuthorities();
     }
+  }
+
+  showInfo(){
+    this.toastr.warning("Solo para admin!", "Login");
+  }
+
+  showSuccsess(){
+    this.toastr.success("Bienvenido!", "Login");
   }
 
   onLoggin():void{
@@ -42,6 +53,7 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
+        this.showSuccsess();
         this.router.navigate([''])
       })
   }

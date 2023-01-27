@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Redes } from 'src/app/model/redes';
 import { RedesService } from 'src/app/service/redes.service';
 
@@ -14,7 +15,8 @@ export class EditRedesComponent implements OnInit {
   constructor(
     private Sredes: RedesService,
     private actiRouter: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private toastr:ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -22,17 +24,26 @@ export class EditRedesComponent implements OnInit {
     this.Sredes.detail(id).subscribe(data =>{
       this.red=data;
     },err =>{
-      alert("Error al modifical la red social");
+      this.showError();
       this.router.navigate(['']);
     })
+  }
+
+  showSuccess(){
+    this.toastr.success("Editada!", "Red Social");
+  }
+
+  showError(){
+    this.toastr.error("Error al modificar!", "Red Social");
   }
 
   onUpdate():void{
     const id = this.actiRouter.snapshot.params['id'];
     this.Sredes.update(id, this.red).subscribe(()=>{
+      this.showSuccess();
       this.router.navigate(['']);
     }, err =>{
-      alert("Error al actualizar la red social");
+      this.showError();
       this.router.navigate(['']);
     })
   }

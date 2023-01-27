@@ -3,6 +3,7 @@ import { Proyecto } from 'src/app/model/proyectos';
 import { SProyectoService } from 'src/app/service/s-proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
 import * as AOS from 'aos';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-proyectos',
@@ -16,7 +17,8 @@ export class ProyectosComponent implements OnInit {
   isLogged = false; 
 
   constructor(public proyectService: SProyectoService,
-    private token: TokenService){}
+    private token: TokenService,
+    private toastr: ToastrService){}
 
   ngOnInit(): void {
     AOS.init({disable: window.innerWidth <800});
@@ -28,6 +30,10 @@ export class ProyectosComponent implements OnInit {
     }
   }
 
+  showInfo(){
+    this.toastr.info("Borrado!", "Proyecto")
+  }
+
   cargarProyectos():void{
     this.proyectService.lista().subscribe( data =>{
       this.proyecto = data;
@@ -37,6 +43,7 @@ export class ProyectosComponent implements OnInit {
   delete(id?: number){
     if(id != undefined){
       this.proyectService.delete(id).subscribe(() => {
+        this.showInfo();
         this.cargarProyectos();
       })
     }

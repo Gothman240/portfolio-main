@@ -3,6 +3,7 @@ import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
 import { TokenService } from 'src/app/service/token.service';
 import * as AOS from 'aos';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-educacion',
@@ -16,7 +17,8 @@ export class EducacionComponent implements OnInit {
 
   constructor(
     private eduSev: EducacionService,
-    private tokenS: TokenService) { }
+    private tokenS: TokenService,
+    private toastr: ToastrService) { }
 
 
   ngOnInit(): void {
@@ -29,6 +31,14 @@ export class EducacionComponent implements OnInit {
     }
   }
 
+  showInfo(){
+    this.toastr.info("Borrado!", "Educacion");
+  }
+
+  showError(){
+    this.toastr.error("Error al borrar", "Educacion");
+  }
+
   cargarEducacion( ):void{
     this.eduSev.lista().subscribe(data => {
       this.educacion = data;
@@ -38,9 +48,10 @@ export class EducacionComponent implements OnInit {
   borrar(id:number){
     if(id != undefined){
       this.eduSev.delete(id).subscribe(data =>{
+        this.showInfo();
         this.cargarEducacion();
-      }, err =>{
-        alert("No se pudo eliminar");
+      },err =>{
+        this.showError();
       })
     }
   }

@@ -24,6 +24,7 @@ import { EditSkillComponent } from './website/components/skills/edit-skill/edit-
 import { NewSkillComponent } from './website/components/skills/new-skill/new-skill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ToastrModule } from 'ngx-toastr';
 
 import { EditMeComponent } from './website/components/me/edit-me/edit-me.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
@@ -73,6 +74,11 @@ import { EditRedesComponent } from './website/components/redes/edit-redes/edit-r
     FormsModule,
     BrowserAnimationsModule,
     MatTooltipModule,
+    ToastrModule.forRoot({
+      timeOut:3000,
+      closeButton: false,
+      progressBar: true,
+    }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],

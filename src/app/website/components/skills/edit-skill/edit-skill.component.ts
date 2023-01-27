@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Skill } from 'src/app/model/skill';
 import { SSkillService } from 'src/app/service/s-skill.service';
 
@@ -16,7 +17,8 @@ export class EditSkillComponent implements OnInit{
   constructor(
     private skillServ: SSkillService,
     private activRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private toastr:ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -24,18 +26,26 @@ export class EditSkillComponent implements OnInit{
     this.skillServ.detail(id).subscribe(data =>{
       this.skill = data;
     },err =>{
-      alert("Error al modificar la skill");
+      this.showError("Error al modificar");
       this.router.navigate(['']);
     })
     
+  }
+  showSuccess(){
+    this.toastr.success("Editado!", "Skill");
+  }
+
+  showError(mensaje: string){
+    this.toastr.error(mensaje, "Skill");
   }
 
   onUpdate(){
     const id= this.activRoute.snapshot.params['id'];
     this.skillServ.update(id, this.skill).subscribe(data =>{
+      this.showSuccess();
       this.router.navigate(['']);
     },err =>{
-      alert("Error al actualizar la skill");
+      this.showError("Error al actualizar!");
       this.router.navigate(['']);
     })
   }

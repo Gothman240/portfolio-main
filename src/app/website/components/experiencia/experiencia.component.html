@@ -27,20 +27,15 @@
       <p>{{ experiencia.descripcionE }}</p>
       <div class="icon-box">
         <!-- editar icon -->
-        <button id="pencil" class="btn btn-success">
+        <button *ngIf="isLogged" id="pencil" class="btn btn-success">
           <i
             routerLink="/editexp/{{ experiencia.id }}"
-            *ngIf="isLogged"
             class="bi bi-pencil"
           ></i>
         </button>
         <!-- delete icon -->
-        <button id="trash" class="btn btn-danger">
-          <i
-            (click)="delete(experiencia.id)"
-            *ngIf="isLogged"
-            class="bi bi-trash3-fill"
-          ></i>
+        <button *ngIf="isLogged" id="trash" class="btn btn-danger">
+          <i (click)="delete(experiencia.id)" class="bi bi-trash3-fill"></i>
         </button>
       </div>
     </div>

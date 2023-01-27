@@ -1,33 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/service/s-experiencia.service';
 
 @Component({
   selector: 'app-new-experiencia',
   templateUrl: './new-experiencia.component.html',
-  styleUrls: ['./new-experiencia.component.css']
+  styleUrls: ['./new-experiencia.component.css'],
 })
 export class NewExperienciaComponent implements OnInit {
-
   nombreE: string = '';
   descripcionE: string = '';
 
+  constructor(
+    private expSev: SExperienciaService,
+    private router: Router,
+    private toastr: ToastrService
+  ) {}
 
-  constructor(private expSev: SExperienciaService, private router: Router) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-
+  showSuccess(){
+    this.toastr.success("Agrega!", "Experiencia");
   }
 
-  onCreate():void {
+  showError(){
+    this.toastr.error("Error al añadir", "Experiencia");
+  }
+
+  onCreate(): void {
     const expe = new Experiencia(this.nombreE, this.descripcionE);
-    this.expSev.save(expe).subscribe(data =>{
-      alert("Experiencia añadida");
+    this.expSev.save(expe).subscribe((data) => {
+      this.showSuccess();
       this.router.navigate(['']);
-
-    })
-    }
+    }, err => {
+      this.showError();
+    });
   }
-
-
+}
