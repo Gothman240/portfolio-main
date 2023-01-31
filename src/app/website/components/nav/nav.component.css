@@ -1,11 +1,12 @@
 .bg-nav{
-    background-color: #383838;
+    background-color: var(--negro);
 }
 
 #navbar{
     position: sticky !important;
     top: 0px !important;
     z-index: 99;
+    font-weight: 800;
 }
 
 .hover-border{
@@ -20,7 +21,7 @@
 
 .hover-border:after{
     content: "";
-    background-color:#fcff82;
+    background-color: var(--verde);
     width: 0%;
     height: 2px;
     position: absolute;
@@ -35,7 +36,7 @@
 }
 
 .hover-border:hover{
-    color:#fcff82;
+    color: var(--verde);
     transition: all 500ms;
 }
 
@@ -43,7 +44,7 @@
 
 .button-nav{
     position: relative;
-    background-color: #424242;
+    background-color: var(--negro-claro);
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -54,18 +55,18 @@
 }
 
 .button-nav:hover{
-    color: #fcff82;
+    color: var(--verde);
 
 }
 
 .button-nav span{
     position: absolute;
-    background: #fcff82;
+    background: var(--verde);
     transition: 500ms;
 }
 
 .button-nav span:nth-child(1){
-    max-width: 100%;
+    width: 100%;
     height: 1px;
     top: 0;
     left: -100%;

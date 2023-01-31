@@ -3,6 +3,7 @@ img {
     height: auto;
     display: block;
     object-fit: cover;
+    filter: opacity(70%);
 }
 
 .hex {
@@ -10,6 +11,6 @@ img {
     display: flex;
     width: 240px;
     height: 245px;
-    background-color: #424242;
+    background-color: var(--verde);
     clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
 }

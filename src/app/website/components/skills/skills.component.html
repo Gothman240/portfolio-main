@@ -1,12 +1,12 @@
-<div
+<section
   id="skill"
-  class="row justify-content-center align-items-center text-center"
+  class="row justify-content-center align-items-center"
   data-aos="fade-left"
   data-aos-delay="1000"
   *ngFor="let skill of skill"
 >
   <div class="col-12">
-    <div class="float-end">
+    <div class="d-inline-block float-end">
       <!-- edit icon -->
       <button *ngIf="isLogged" id="pencil" class="btn btn-success btn-sm">
         <i routerLink="/editskill/{{ skill.id }}" class="bi bi-pencil"></i>
@@ -17,9 +17,9 @@
       </button>
     </div>
   </div>
-  <div class="col-1 align-items-center mb-2">
+  <div class="col-1 align-items-center">
     <div class="iconbox" [matTooltip]="skill.nombre" matTooltipPosition="above">
-      <i class="iconbox" [class]="skill.iconskill" style="height: 100%"></i>
+      <i class="icono" [class]="skill.iconskill" style="height: 100%"></i>
     </div>
   </div>
   <div class="col-11 p-0 mb-2">
@@ -36,7 +36,7 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <div class="col-12">
   <div class="d-block mx-auto">

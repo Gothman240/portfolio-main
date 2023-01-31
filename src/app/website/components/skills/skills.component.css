@@ -5,3 +5,11 @@
 .bg-icon{
     background-color: #e9ecef;
 }
+
+.progress-bar{
+    background-color: var(--naranja-oscuro);
+}
+
+.icono{
+    color: var(--verde-oscuro);
+}

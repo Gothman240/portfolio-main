@@ -7,14 +7,14 @@
 }
 
 .cont-formulario {
-    background-color: #424242;
-    color: whitesmoke;
+    background-color: var(--negro);
+    color: #fff;
     outline: none;
 
 }
 
 .cont-formulario input {
-    background-color: #383838;
+    background-color: var(--negro-claro);
     height: 48px;
     outline: none;
     color: #fff;
@@ -23,7 +23,7 @@
 
 
 .cont-formulario textarea {
-    background-color: #383838;
+    background-color: var(--negro-claro);
     height: 240px;
     outline: none;
     color: #fff;
@@ -32,8 +32,8 @@
 /* footer */
 
 .container-footer {
-    background-color: #383838;
-    color: whitesmoke;
+    background-color: var(--negro-claro);
+    color: #fff;
 }
 
 .container-footer div{

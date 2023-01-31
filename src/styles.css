@@ -1,5 +1,18 @@
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --negro: #383838;
+  --negro-claro: #424242;
+  --naranja-claro-1: #ffe9d5;
+  --naranja-claro-2:#ffcfa2;
+  --naranja: #ff9a3c;
+  --naranja-oscuro: #ff8009;
+  --verde-claro-1: #b1e9de;
+  --verde-claro-2: #89decd;
+  --verde: #39c8ac;
+  --verde-oscuro: #227968;
+}
 
 section[id] {
   scroll-padding-top: 75px;
@@ -13,7 +26,6 @@ section[id] {
 #trash:hover {
   background: rgba(241, 5, 34, 0.2);
   color: #ff0000;
-  
 }
 
 #pencil {
@@ -23,7 +35,7 @@ section[id] {
 
 #pencil:hover {
   background: rgba(126, 211, 33, 0.3);
-  color:#000;
+  color: #000;
   border-radius: 150px;
 }
 
