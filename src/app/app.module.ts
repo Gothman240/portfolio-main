@@ -24,6 +24,7 @@ import { EditSkillComponent } from './website/components/skills/edit-skill/edit-
 import { NewSkillComponent } from './website/components/skills/new-skill/new-skill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import {MatDialogModule} from '@angular/material/dialog'; 
 import { ToastrModule } from 'ngx-toastr';
 
 import { EditMeComponent } from './website/components/me/edit-me/edit-me.component';
@@ -74,6 +75,7 @@ import { EditRedesComponent } from './website/components/redes/edit-redes/edit-r
     FormsModule,
     BrowserAnimationsModule,
     MatTooltipModule,
+    MatDialogModule,
     ToastrModule.forRoot({
       timeOut:3000,
       closeButton: false,

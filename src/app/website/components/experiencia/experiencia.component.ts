@@ -38,20 +38,20 @@ export class ExperienciaComponent implements OnInit {
   }
 
   showError(){
-    this.toastr.error("Error al borrar", "Educacion");
+    this.toastr.error("Error al borrar", "Experiencia");
   }
 
   cargarExp(): void {
-    this.expSev.lista().subscribe((data) => {
+    this.expSev.lista().subscribe(data => {
       this.exp = data;
     });
   }
 
   delete(id?: number) {
     if (id != undefined) {
-      this.expSev.delete(id).subscribe(() => {
-        this.showInfo();
+      this.expSev.delete(id).subscribe(data => {
         this.cargarExp();
+        this.showInfo();
       }, err=>{
         this.showError();
       });

@@ -4,6 +4,7 @@ import { SProyectoService } from 'src/app/service/s-proyecto.service';
 import { TokenService } from 'src/app/service/token.service';
 import * as AOS from 'aos';
 import { ToastrService } from 'ngx-toastr';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-proyectos',
@@ -16,9 +17,19 @@ export class ProyectosComponent implements OnInit {
   proyecto: Proyecto [] = [];
   isLogged = false; 
 
+  proyectoModal: Proyecto = {
+    id: null,
+    nombre: '',
+    descripcion: '',
+    imgP: '',
+    link:'',
+    gitLink: '',
+  }
+
   constructor(public proyectService: SProyectoService,
     private token: TokenService,
-    private toastr: ToastrService){}
+    private toastr: ToastrService,
+    public dialog: MatDialog){}
 
   ngOnInit(): void {
     AOS.init({disable: window.innerWidth <800});
@@ -47,5 +58,14 @@ export class ProyectosComponent implements OnInit {
         this.cargarProyectos();
       })
     }
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(ProyectosComponent);
+  }
+  proyectoId(id: number){
+    this.proyectService.detail(id).subscribe(data =>{
+      this.proyectoModal = data;
+    })
   }
 }
