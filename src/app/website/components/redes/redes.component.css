@@ -1,0 +1,32 @@
+.icono-redes, .icono-redes2 {
+    display: inline-block;
+   color: var(--naranja);
+   transition: .5s;
+   font-size: 25px;
+}
+
+.icono-redes{
+    transform: translate(50%);
+}
+
+.caja-icono{
+    display: block;
+    overflow: hidden; 
+    transition: .5s;
+}
+
+
+
+.caja-icono:hover .icono-redes{
+    color: var(--verde);
+    transform: translateX(-100%);
+}
+
+.icono-redes2{
+    color: var(--verde);
+    transform: translate(100%);
+}
+
+.caja-icono:hover .icono-redes2{
+    transform: translateX(-50%);
+}
