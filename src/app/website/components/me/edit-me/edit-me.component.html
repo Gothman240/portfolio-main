@@ -1,33 +1,3 @@
-<!-- <div class="container" *ngIf="persona">
-    <div class="row">
-        <div>
-            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
-                <div class="form-group mb-3">
-                  <label for="nombre" class="form-label">Nombre</label>
-                  <input type="text" name="nombre" id="nombre" class="form-control" placeholder="" [(ngModel)]="persona.nombre" required>
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="apeullido" class="form-label">Apellido</label>
-                    <input type="text" name="apellido" id="apellido" class="form-control" placeholder="" [(ngModel)]="persona.apellido" required>
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="descripcion" class="form-label">Descripcion</label>
-                    <input type="text" name="descripcion" id="descripcion" class="form-control" placeholder="" [(ngModel)]="persona.descripcion" required>
-                </div>
-
-                <div class="form-group mb-3">
-                    <label for="img" class="form-label">Imagen</label>
-                    <input type="file" name="img" id="img" class="form-control" placeholder="" [(ngModel)]="persona.img" (change)="uploadImg($event)" accept=".jpg, .jpeg, .png">
-                </div>
-
-                <button class="btn btn-success" type="submit">Actualizar</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
 <section class="vh-100" style="background-color: #9a616d" *ngIf="persona">
   <div class="container vh-100">
     <div class="row d-flex justify-content-center align-items-center h-100">

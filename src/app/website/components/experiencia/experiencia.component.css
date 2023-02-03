@@ -16,3 +16,39 @@
 
 }
 
+.time-line{
+    margin-right: 14px;
+}
+
+.bola{
+    display: block;
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: var(--violeta);
+}
+
+.linea{
+    display: block;
+    width: 1px;
+    height: 100%;
+    background-color: var(--violeta);
+    transform: translate(6px, -7px);
+}
+
+.time-line-hide{
+    display: inline-block;
+}
+
+.exp-row:nth-child(odd) .col-hide{
+    display:none;
+}
+
+.exp-row:nth-child(odd) .time-line{
+    display: none;
+}
+
+.exp-row:nth-child(even) .time-line-hide{
+    display: none;
+}
+

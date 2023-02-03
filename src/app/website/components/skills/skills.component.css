@@ -7,9 +7,10 @@
 }
 
 .progress-bar{
-    background-color: var(--naranja-oscuro);
+    background-color: var(--violeta);
 }
 
 .icono{
+    transform: scale(1.2);
     color: var(--verde-oscuro);
 }

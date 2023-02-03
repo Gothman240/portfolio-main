@@ -1,4 +1,4 @@
-<section id="exp" class="container" *ngIf="exp">
+<!-- <section id="exp" class="container" *ngIf="exp">
   <div class="row justify-content-center align-items-center text-center g-2">
     <h1 data-aos="fade-left" class="col-12 my-5">
       Experiencia laboral
@@ -26,17 +26,68 @@
       </h2>
       <p>{{ experiencia.descripcionE }}</p>
       <div class="icon-box">
-        <!-- editar icon -->
         <button *ngIf="isLogged" id="pencil" class="btn btn-success">
           <i
             routerLink="/editexp/{{ experiencia.id }}"
             class="bi bi-pencil"
           ></i>
         </button>
-        <!-- delete icon -->
         <button *ngIf="isLogged" id="trash" class="btn btn-danger">
           <i (click)="delete(experiencia.id)" class="bi bi-trash3-fill"></i>
         </button>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<section id="exp" class="container">
+  <div class="row justify-content-center align-items-center text-center">
+    <div class="col-12 my-5">
+      <h1>
+        Experiencia Laboral
+        <i
+          id="plus"
+          routerLink="/nuevaexp"
+          *ngIf="isLogged"
+          class="bi bi-plus"
+        ></i>
+      </h1>
+    </div>
+
+    <div class="exp-row d-flex text-center" *ngFor="let experiencia of exp">
+      <div class="col-6 col-hide"></div>
+
+      <div class="time-line">
+        <span class="bola"></span>
+        <span class="linea"></span>
+      </div>
+      <div class="exp-list col-6">
+        <div>
+          <h2>
+            {{ experiencia.nombreE }}
+          </h2>
+
+          <p class="mb-3 text-muted">{{ experiencia.descripcionE }}</p>
+          <span class="text-muted">
+            <i class="fa-regular fa-calendar"></i>
+            <i>{{ experiencia.duracion }}</i>
+          </span>
+          <div class="icon-box">
+            <button *ngIf="isLogged" id="pencil" class="btn btn-success">
+              <i
+                routerLink="/editexp/{{ experiencia.id }}"
+                class="bi bi-pencil"
+              ></i>
+            </button>
+            <button *ngIf="isLogged" id="trash" class="btn btn-danger">
+              <i (click)="delete(experiencia.id)" class="bi bi-trash3-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="time-line-hide">
+        <span class="bola"></span>
+        <span class="linea"></span>
       </div>
     </div>
   </div>
