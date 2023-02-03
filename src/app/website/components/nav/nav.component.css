@@ -16,7 +16,7 @@
 }
 
 .navbar{
-    border-bottom: #f6e4ad 2px solid;
+    border-bottom: var(--naranja) 2px solid;
 }
 
 .hover-border:after{

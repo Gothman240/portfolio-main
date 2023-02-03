@@ -20,7 +20,7 @@ export class EditExpComponent implements OnInit {
   ) {}
 
   showSuccess(){
-    this.toastr.success("Agregado!", "Experiencia");
+    this.toastr.success("Editada!", "Experiencia");
   }
 
   showError(mensaje: string){

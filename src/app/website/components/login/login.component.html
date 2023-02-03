@@ -1,42 +1,49 @@
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-lg-4 col-md-6 col-sm-6 py-5">
-      <div class="card shadow">
-        <div class="card-title text-center border-bottom">
-          <h2 class="p-3">Login</h2>
-        </div>
-        <div class="card-body">
-          <form #f="ngForm" (ngSubmit)="onLoggin()" novalidate>
-            <div class="mb-4">
-              <label for="nombreUsuario" class="form-label">Username</label>
-              <input
-                class="form-control form-control-lg"
-                type="email"                
-                id="nombreUsuario"
-                [(ngModel)]="nombreUsuario"
-                name="nombreUsuario"
-                required
-              />
-            </div>
-            <div class="mb-4">
-              <label for="password" class="form-label">Password</label>
-              <input
-                class="form-control form-control-lg"
-                type="passwod"
-                
-                id="password"
-                [(ngModel)]="password"
-                name="password"
-                required
-              />
-            </div>
+<section class="vh-100" style="background-color: var(--verde-oscuro)">
+  <div class="container">
+    <div class="row justify-content-center py-5">
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="card shadow">
+          <div class="card-title text-center border-bottom">
+            <h2 class="py-3 d-inline-block">Login</h2>
+            <button
+              type="button"
+              class="btn-close float-end m-3"
+              aria-label="Close"
+              routerLink=""
+            ></button>
+          </div>
+          <div class="card-body">
+            <form #f="ngForm" (ngSubmit)="onLoggin()" novalidate>
+              <div class="mb-4">
+                <label for="nombreUsuario" class="form-label">Username</label>
+                <input
+                  class="form-control form-control-lg"
+                  type="email"
+                  id="nombreUsuario"
+                  [(ngModel)]="nombreUsuario"
+                  name="nombreUsuario"
+                  required
+                />
+              </div>
+              <div class="mb-4">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  class="form-control form-control-lg"
+                  type="passwod"
+                  id="password"
+                  [(ngModel)]="password"
+                  name="password"
+                  required
+                />
+              </div>
 
-            <div class="d-grid py-3">
-              <button type="submit" class="btn btn-secondary">Login</button>
-            </div>
-          </form>
+              <div class="d-grid py-3">
+                <button type="submit" class="btn btn-secondary">Login</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>

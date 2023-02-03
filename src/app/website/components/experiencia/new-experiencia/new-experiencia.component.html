@@ -3,7 +3,13 @@
     <div class="col-lg-4 col-md-6 col-sm-6 py-5">
       <div class="card shadow">
         <div class="card-title text-center border-bottom">
-          <h2 class="p-3">Nueva experiencia</h2>
+          <h2 class="p-3 d-inline-block">Nueva experiencia</h2>
+          <button
+            type="button"
+            class="btn-close float-end m-3"
+            aria-label="Close"
+            routerLink=""
+          ></button>
         </div>
         <div class="card-body">
           <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
