@@ -1,42 +1,8 @@
-<!-- <section
-  id="Proyectos"
-  class="row justify-content-center align-items-center text-center g-2"
->
-  <div data-aos="fade-right" class="col-12">
-    <h1>
-      Proyectos
-      <i
-        id="plus"
-        routerLink="/nuevoproyecto"
-        *ngIf="isLogged"
-        class="bi bi-plus"
-      ></i>
-    </h1>
-  </div>
+<section id="Proyectos" class="container-sm">
   <div
-    data-aos="zoom-in"
-    data-aos-delay="1200"
-    class="col-6 col-lg-3 h-100 pt-5 g-4"
-    *ngFor="let Proyecto of proyecto"
+    class="row justify-content-center align-items-center text-center py-5 g-0"
   >
-    <div class="card h-100">
-      <img src="{{ Proyecto.imgP }}" class="card-img-top" alt="..." />
-
-     
-
-      <div class="card-body">
-        <h5 class="card-title">{{ Proyecto.nombre }}</h5>
-        <p class="card-text">{{ Proyecto.descripcion }}</p>
-      </div>
-    </div>
-  </div>
-</section>
- -->
-<div class="container-sm">
-  <div
-    class="row justify-content-center align-items-center text-center my-5 g-0"
-  >
-    <div class="col12">
+    <div class="col-12 py-5">
       <h1>
         Proyectos
         <i
@@ -52,23 +18,30 @@
         <img src="{{ proyectos.imgP }}" class="imgfluid" alt="" />
         <div class="textbox">
           <div class="cardbox">
-            <h1>
+            <h1 class="mb-3">
               {{ proyectos.nombre }}
 
               <div class="icon-box">
-                <i
+                <button
                   id="pencil"
-                  routerLink="/editproyecto/{{ proyectos.id }}"
+                  class="btn btn-success btn-sm"
                   *ngIf="isLogged"
-                  class="bi bi-pencil"
-                ></i>
-
-                <i
+                >
+                  <i
+                    routerLink="/editproyecto/{{ proyectos.id }}"
+                    class="bi bi-pencil"
+                  ></i>
+                </button>
+                <button
                   id="trash"
-                  (click)="delete(proyectos.id)"
+                  class="btn btn-danger btn-sm"
                   *ngIf="isLogged"
-                  class="bi bi-trash3-fill"
-                ></i>
+                >
+                  <i
+                    (click)="delete(proyectos.id)"
+                    class="bi bi-trash3-fill"
+                  ></i>
+                </button>
               </div>
             </h1>
 
@@ -89,7 +62,7 @@
       </div>
     </div>
   </div>
-</div>
+</section>
 
 <!-- Modal -->
 <div

@@ -1,3 +1,18 @@
+<div class="row" *ngIf="isLogged">
+
+  <div class="col-12">
+    <span >
+       Nueva Skill
+      <i
+        class="d-block mx-auto"
+        routerLink="/nuevaskill"
+        *ngIf="isLogged"
+        class="bi bi-plus"
+        style="cursor: pointer;"
+      ></i>
+    </span>
+  </div>
+</div>
 <section
   id="skill"
   class="row justify-content-center align-items-center"
@@ -38,13 +53,3 @@
   </div>
 </section>
 
-<div class="col-12">
-  <div class="d-block mx-auto">
-    <i
-      class="d-block mx-auto"
-      routerLink="/nuevaskill"
-      *ngIf="isLogged"
-      class="bi bi-plus"
-    ></i>
-  </div>
-</div>
