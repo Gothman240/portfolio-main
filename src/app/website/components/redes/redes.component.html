@@ -1,43 +1,46 @@
-<div class="row justify-content-center align-items-center">
-  <div *ngIf="isLogged" class="col-12">
-    <h2>
-      Nueva Red
-
-      <i
-        id="plus"
-        routerLink="/nuevared"
-        *ngIf="isLogged"
-        class="bi bi-plus"
-      ></i>
-    </h2>
-  </div>
-  <div class="col">
-    <div *ngFor="let redes of red" class="redes d-inline-block my-2 mx-3">
-      <!-- red -->
-      <span class="d-block my-2 mx-3">
-        <a
-          [matTooltip]="redes.nombre"
-          matTooltipPosition="above"
-          [href]="redes.url"
-          target="_blank"
-          class="caja-icono"
-        >
-          <i class="icono-redes" [ngClass]="redes.iconRedes"></i>
-          <i class="icono-redes2" [ngClass]="redes.iconRedes"></i>
-        </a>
-      </span>
-      <!-- editar icon -->
-      <button id="pencil" class="btn btn-success btn-sm " *ngIf="isLogged">
-        <i routerLink="/editred/{{ redes.id }}" class="bi bi-pencil"></i>
-      </button>
-      <!-- delete icon -->
-      <button id="trash" class="btn btn-danger btn-sm " *ngIf="isLogged">
+<div class="container">
+  <div class="row justify-content-center align-items-center">
+    <div *ngIf="isLogged" class="col-12">
+      <h2>
+        Nueva Red
+  
         <i
-          id="trash"
-          (click)="borrarRedes(redes.id)"
-          class="bi bi-trash3-fill"
+          id="plus"
+          routerLink="/nuevared"
+          *ngIf="isLogged"
+          class="bi bi-plus"
         ></i>
-      </button>
+      </h2>
+    </div>
+    <div class="col">
+      <div *ngFor="let redes of red" class="redes d-inline-block my-2 mx-3">
+        <!-- red -->
+        <span class="d-block my-2 mx-3">
+          <a
+            [matTooltip]="redes.nombre"
+            matTooltipPosition="above"
+            [href]="redes.url"
+            target="_blank"
+            class="caja-icono"
+          >
+            <i class="icono-redes" [ngClass]="redes.iconRedes"></i>
+            <i class="icono-redes2" [ngClass]="redes.iconRedes"></i>
+          </a>
+        </span>
+        <!-- editar icon -->
+        <button id="pencil" class="btn btn-success btn-sm " *ngIf="isLogged">
+          <i routerLink="/editred/{{ redes.id }}" class="bi bi-pencil"></i>
+        </button>
+        <!-- delete icon -->
+        <button id="trash" class="btn btn-danger btn-sm " *ngIf="isLogged">
+          <i
+            id="trash"
+            (click)="borrarRedes(redes.id)"
+            class="bi bi-trash3-fill"
+          ></i>
+        </button>
+      </div>
     </div>
   </div>
+
 </div>
