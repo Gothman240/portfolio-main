@@ -14,7 +14,7 @@
       </h1>
     </div>
     <div class="col-12 col-md-6 col-lg-4" *ngFor="let proyectos of proyecto">
-      <div class="imgbox">
+      <div data-aos="zoom-in" class="imgbox">
         <img src="{{ proyectos.imgP }}" class="imgfluid" alt="" />
         <div class="textbox">
           <div class="cardbox">
@@ -45,7 +45,7 @@
               </div>
             </h1>
 
-            <div class="links-box">
+            <div class="links-box pt-3">
               <!-- Button trigger modal -->
               <button
                 (click)="proyectoId(proyectos.id)"

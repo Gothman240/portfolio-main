@@ -1,45 +1,3 @@
-<!-- <section id="exp" class="container" *ngIf="exp">
-  <div class="row justify-content-center align-items-center text-center g-2">
-    <h1 data-aos="fade-left" class="col-12 my-5">
-      Experiencia laboral
-
-      <i
-        id="plus"
-        routerLink="/nuevaexp"
-        *ngIf="isLogged"
-        class="bi bi-plus"
-      ></i>
-    </h1>
-
-    <div
-      data-aos="fade-up"
-      data-aos-delay="1000"
-      class="col-6 col-lg-3 h-100 pt-5"
-      *ngFor="let experiencia of exp"
-    >
-      <div class="hex-about">
-        <i class="fa-solid fa-briefcase"></i>
-      </div>
-
-      <h2>
-        {{ experiencia.nombreE }}
-      </h2>
-      <p>{{ experiencia.descripcionE }}</p>
-      <div class="icon-box">
-        <button *ngIf="isLogged" id="pencil" class="btn btn-success">
-          <i
-            routerLink="/editexp/{{ experiencia.id }}"
-            class="bi bi-pencil"
-          ></i>
-        </button>
-        <button *ngIf="isLogged" id="trash" class="btn btn-danger">
-          <i (click)="delete(experiencia.id)" class="bi bi-trash3-fill"></i>
-        </button>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <section id="exp" class="container">
   <div class="row justify-content-center align-items-center text-center">
     <div class="col-12 my-5">
@@ -54,7 +12,12 @@
       </h1>
     </div>
 
-    <div class="exp-row text-center" *ngFor="let experiencia of exp">
+    <div
+      class="exp-row text-center"
+      data-aos="fade-up"
+      data-aos-delay="1000"
+      *ngFor="let experiencia of exp"
+    >
       <div class="col-6 col-hide"></div>
 
       <div class="time-line">

@@ -32,7 +32,8 @@ export class ProyectosComponent implements OnInit {
     public dialog: MatDialog){}
 
   ngOnInit(): void {
-    AOS.init({disable: window.innerWidth <800});
+    AOS.init({
+      disable: window.innerWidth < 768});
     this.cargarProyectos();
     if(this.token.getToken()){
       this.isLogged=true;

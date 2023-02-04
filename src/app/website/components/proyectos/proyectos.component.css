@@ -56,9 +56,12 @@
 
 }
 
+.btn{
+    border-radius: 0% !important;
+}
+
 .btnhover:hover{
     color: #fff;
-    border: 2px solid var(--violeta);
     box-shadow: inset 150px 0 0 0 var(--violeta);
 }
 
