@@ -1,21 +1,9 @@
-<div class="row" *ngIf="isLogged">
 
-  <div class="col-12">
-    <span >
-       Nueva Skill
-      <i
-        class="d-block mx-auto"
-        routerLink="/nuevaskill"
-        *ngIf="isLogged"
-        class="bi bi-plus"
-        style="cursor: pointer;"
-      ></i>
-    </span>
-  </div>
-</div>
 <div
   id="skill"
-  class="row justify-content-center align-items-center"
+  class="row justify-content-between align-items-center m-0"
+  data-aos="fade-left"
+  data-aos-delay="1000"
   *ngFor="let skill of skill"
 >
   <div class="col-12">
@@ -30,7 +18,7 @@
       </button>
     </div>
   </div>
-  <div class="col-1 py-auto align-items-center mb-3">
+  <div class="col-1 align-items-center mb-3">
     <div [matTooltip]="skill.nombre" matTooltipPosition="above">
       <i class="icono" [class]="skill.iconskill" style="height: 100%"></i>
     </div>

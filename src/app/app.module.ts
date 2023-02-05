@@ -14,7 +14,7 @@ import { MeComponent } from './website/components/me/me.component';
 import { HomeComponent } from './website/components/home/home.component';
 import { LoginComponent } from './website/components/login/login.component'
 import { FormsModule } from '@angular/forms';
-import { InterceptorProvider } from './service/interceptor-service';
+import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './website/components/experiencia/new-experiencia/new-experiencia.component';
 import { EditExpComponent } from './website/components/experiencia/edit-exp/edit-exp.component';
 import { EducacionComponent } from './website/components/educacion/educacion.component';
@@ -77,14 +77,16 @@ import { EditRedesComponent } from './website/components/redes/edit-redes/edit-r
     MatTooltipModule,
     MatDialogModule,
     ToastrModule.forRoot({
-      timeOut:3000,
+      timeOut:5000,
       closeButton: false,
       progressBar: true,
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

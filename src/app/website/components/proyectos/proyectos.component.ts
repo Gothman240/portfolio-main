@@ -33,7 +33,8 @@ export class ProyectosComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init({
-      disable: window.innerWidth < 768});
+      disable: "mobile"
+      });
     this.cargarProyectos();
     if(this.token.getToken()){
       this.isLogged=true;

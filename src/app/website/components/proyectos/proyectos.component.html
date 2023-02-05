@@ -77,27 +77,27 @@
     class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-dialog-scrollable"
   >
     <div class="modal-content text-center">
-      <div class="modal-header border-0">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">
+      <img [src]="proyectoModal.imgP" class=" d-block" style="height: 350px;"/>
+      <div class="border-0">
+        <h1 class="modal-title fs-5 m-3 d-inline-block" id="exampleModalLabel">
           {{ proyectoModal.nombre }}
         </h1>
         <button
           type="button"
-          class="btn-close"
+          class="btn-close float-end mt-3"
           data-bs-dismiss="modal"
           aria-label="Close"
-        ></button>
+          ></button>
       </div>
       <div class="modal-body">
-        <img [src]="proyectoModal.imgP" class="w-100 d-block" />
         {{ proyectoModal.descripcion }}
       </div>
       <div class="modal-footer m-auto">
         <a class="btn btnhover" [href]="proyectoModal.gitLink" role="button"
-          ><i class="fa-brands fa-github"></i> Git</a
+        ><i class="fa-brands fa-github"></i> Git</a
         >
-        <a [href]="proyectoModal.link" target="_blank" rel="noopener noreferrer"
-          >Link</a
+        <a [href]="proyectoModal.link" target="_blank"
+        >Link</a
         >
       </div>
     </div>
