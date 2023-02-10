@@ -13,6 +13,10 @@
       </h2>
     </div>
     <div class="col" *ngFor="let redes of red">
+      <!-- editar icon -->
+      <button id="pencil" class="btn btn-success btn-sm " *ngIf="isLogged">
+        <i routerLink="/editred/{{ redes.id }}" class="bi bi-pencil"></i>
+      </button>
       <div class="redes d-inline-block my-2">
         <!-- red -->
         <span class="d-block my-2">
@@ -28,10 +32,7 @@
             <i class="icono-redes2" [ngClass]="redes.iconRedes"></i>
           </a>
         </span>
-        <!-- editar icon -->
-        <button id="pencil" class="btn btn-success btn-sm " *ngIf="isLogged">
-          <i routerLink="/editred/{{ redes.id }}" class="bi bi-pencil"></i>
-        </button>
+        
         <!-- delete icon -->
         <button id="trash" class="btn btn-danger btn-sm " *ngIf="isLogged">
           <i
