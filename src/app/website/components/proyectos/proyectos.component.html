@@ -1,9 +1,9 @@
-<section id="Proyectos" class="container">
+<section id="proyectos" class="container">
   <div
     class="row justify-content-center align-items-center text-center py-5 g-0"
   >
     <div class="col-12 py-5">
-      <h1>
+      <h1 data-aos="fade-right" class="mb-2">
         Proyectos
         <i
           id="plus"
@@ -12,10 +12,11 @@
           class="bi bi-plus"
         ></i>
       </h1>
+      <div data-aos="fade-left" id="h1-line" class="mb-5"></div>
     </div>
     <div class="col-12 col-md-6 col-lg-4" *ngFor="let proyectos of proyecto">
       <div data-aos="zoom-in" class="imgbox">
-        <img src="{{ proyectos.imgP }}" class="imgfluid" alt="" />
+        <img src="{{ proyectos.imgP }}" class="imgfluid" loading="lazy" alt="imagen de proyecto" />
         <div class="textbox">
           <div class="cardbox">
             <h1 class="mb-3">
@@ -77,7 +78,7 @@
     class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down modal-dialog-scrollable"
   >
     <div class="modal-content text-center">
-      <img [src]="proyectoModal.imgP" class=" d-block" style="height: 350px;"/>
+      <img [src]="proyectoModal.imgP" class="d-block" style="height: 350px" alt="imagen de proyecto del modal"/>
       <div class="border-0">
         <h1 class="modal-title fs-5 m-3 d-inline-block" id="exampleModalLabel">
           {{ proyectoModal.nombre }}
@@ -87,18 +88,16 @@
           class="btn-close float-end mt-3"
           data-bs-dismiss="modal"
           aria-label="Close"
-          ></button>
+        ></button>
       </div>
       <div class="modal-body">
         {{ proyectoModal.descripcion }}
       </div>
       <div class="modal-footer m-auto">
         <a class="btn btnhover" [href]="proyectoModal.gitLink" role="button"
-        ><i class="fa-brands fa-github"></i> Git</a
+          ><i class="fa-brands fa-github"></i> Git</a
         >
-        <a [href]="proyectoModal.link" target="_blank"
-        >Link</a
-        >
+        <a [href]="proyectoModal.link" target="_blank">Link</a>
       </div>
     </div>
   </div>

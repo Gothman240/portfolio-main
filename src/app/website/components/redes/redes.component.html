@@ -13,15 +13,16 @@
       </h2>
     </div>
     <div class="col" *ngFor="let redes of red">
-      <div  class="redes d-inline-block my-2 mx-1">
+      <div class="redes d-inline-block my-2">
         <!-- red -->
-        <span class="d-block my-2 mx-1">
+        <span class="d-block my-2">
           <a
             [matTooltip]="redes.nombre"
             matTooltipPosition="above"
             [href]="redes.url"
             target="_blank"
             class="caja-icono"
+            [rel]="redes.nombre"
           >
             <i class="icono-redes" [ngClass]="redes.iconRedes"></i>
             <i class="icono-redes2" [ngClass]="redes.iconRedes"></i>

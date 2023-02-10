@@ -22,3 +22,11 @@
     box-shadow: inset 150px 0 0 0 var(--violeta);
 }
 
+a.btnhoover i.bi{
+    display: inline-block;
+    transition: 500ms;
+}
+a.btnhoover:hover i.bi{
+    transform: rotate(90deg);
+}
+

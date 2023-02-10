@@ -1,9 +1,9 @@
 <section id="educacion" class="container">
   <div
-    class="row justify-content-center align-items-center text-center my-5 g-2"
+    class="row justify-content-center align-items-center text-center py-5 g-2"
   >
-    <div data-aos="fade-right" class="col-12 mb-5">
-      <h1>
+    <div class="col-12 py-5">
+      <h1 data-aos="fade-right" class="mb-2">
         Educacion
         <i
           id="plus"
@@ -12,6 +12,7 @@
           class="bi bi-plus"
         ></i>
       </h1>
+      <div data-aos="fade-left" id="h1-line" class="mb-5"></div>
     </div>
 
     <div
@@ -27,6 +28,7 @@
       <h2>{{ Educacion.nombreE }}</h2>
       <p>{{ Educacion.descripcionE }}</p>
       <p>
+        <i class="fa-regular fa-calendar"></i>
         <i>{{ Educacion.fechaE }}</i>
       </p>
       <!-- editar icon -->

@@ -1,7 +1,7 @@
 <section id="exp" class="container">
-  <div class="row justify-content-center align-items-center text-center">
-    <div class="col-12 my-5">
-      <h1>
+  <div class="row justify-content-center align-items-center py-5 text-center">
+    <div class="col-12 py-5">
+      <h1 data-aos="fade-left" class="mb-2">
         Experiencia Laboral
         <i
           id="plus"
@@ -10,6 +10,7 @@
           class="bi bi-plus"
         ></i>
       </h1>
+      <div data-aos="fade-right" id="h1-line" class="mb-5"></div>
     </div>
 
     <div
@@ -31,10 +32,10 @@
           </h2>
 
           <p class="mb-4 text-muted">{{ experiencia.descripcionE }}</p>
-          <span class="text-muted mb-4">
+          <p class="text-muted mb-4">
             <i class="fa-regular fa-calendar"></i>
             <i>{{ experiencia.duracion }}</i>
-          </span>
+          </p>
           <div class="icon-box">
             <button *ngIf="isLogged" id="pencil" class="btn btn-success">
               <i

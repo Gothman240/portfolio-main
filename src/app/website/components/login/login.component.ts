@@ -1,11 +1,10 @@
-import { Token } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import * as Aos from 'aos';
 import { ToastrService } from 'ngx-toastr';
 import { LoginUsuario } from 'src/app/model/login-usuario';
 import { AuthService } from 'src/app/service/auth.service';
 import { TokenService } from 'src/app/service/token.service';
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -28,6 +27,7 @@ export class LoginComponent implements OnInit {
     private toastr: ToastrService) { }
 
   ngOnInit(): void {
+    Aos.init();
     this.showInfo();
     if (this.tokenService.getToken()) {
       this.isLogged = true;

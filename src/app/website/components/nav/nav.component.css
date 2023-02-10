@@ -9,7 +9,7 @@
     font-weight: 800;
 }
 
-.hover-border{
+#hover-border{
     position: relative;
     color: white;
     
@@ -19,7 +19,7 @@
     border-bottom: var(--naranja) 2px solid;
 }
 
-.hover-border:after{
+#hover-border:after{
     content: "";
     background-color: var(--verde);
     width: 0%;
@@ -30,12 +30,12 @@
     transition: all 500ms ease;
 }
 
-.hover-border:hover:after{
+#hover-border:hover:after{
     left: 0%;
     width: 100%;
 }
 
-.hover-border:hover{
+#hover-border:hover{
     color: var(--verde);
     transition: all 500ms;
 }

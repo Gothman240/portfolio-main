@@ -3,7 +3,6 @@ img {
     height: auto;
     display: block;
     object-fit: cover;
-    filter: opacity(70%);
 }
 
 .hex {

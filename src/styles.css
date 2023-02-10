@@ -1,5 +1,4 @@
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');/* You can add global styles to this file, and also import other style files */
 
 
 @media (min-width: 0px) and (max-width: 768px) {
@@ -25,6 +24,9 @@
         -ms-animation: none !important;
         animation: none !important;
   }
+  #h1-line{
+    visibility: hidden;
+  }
 }
 
 :root {
@@ -43,9 +45,15 @@
 }
 
 section[id] {
-  scroll-padding-top: 75px;
+  scroll-padding-top: 200px;
 }
 
+#h1-line{
+  max-width: 70px;
+  border: 3px solid var(--naranja);
+  border-radius: 15px;
+  margin: 0px auto;
+}
 #trash {
   border-radius: 100%;
   transition: all 500ms;
@@ -78,6 +86,4 @@ section[id] {
   color: #ff9a3c;
 }
 
-/* html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
- */
+
