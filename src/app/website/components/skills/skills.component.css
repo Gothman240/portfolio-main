@@ -10,7 +10,32 @@
     background-color: var(--violeta);
 }
 
+.col-1{
+    background-color: var(--violeta-claro);
+}
+
 .icono{
-    transform: scale(1.2);
+    transform: scale(2);
     color: var(--verde-oscuro);
+}
+
+@media (min-width: 0px) and (max-width: 768px){
+    .on-mobile>h3{
+        font-weight: 700;
+        color: var(--verde-oscuro);
+        margin: 0;
+    }
+
+    .hide-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: 769px){
+    .on-mobile{
+        display: none;
+    }
+    .hide-mobile{
+        display: block;
+    }
 }

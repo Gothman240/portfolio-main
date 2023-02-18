@@ -10,6 +10,6 @@ export const environment = {
   },
   production: true,
 
-  url: 'https://backendargprograma.onrender.com'
+  url: 'https://backendargprograma.onrender.com/'
 
 };

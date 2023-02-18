@@ -23,7 +23,7 @@
 
 .icono-redes2 {
   color: var(--verde);
-  transform: translate(100%);
+  transform: translate(110%);
 }
 
 .caja-icono:hover .icono-redes2 {

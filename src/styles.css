@@ -1,54 +1,29 @@
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
-
-@media (min-width: 0px) and (max-width: 768px) {
-  
-  [data-aos] {
- /*CSS transitions*/
-        opacity: 1 !important;
-        -o-transition-property: none !important;
-        -moz-transition-property: none !important;
-        -ms-transition-property: none !important;
-        -webkit-transition-property: none !important;
-        transition-property: none !important;
-        /*CSS transforms*/
-        -o-transform: none !important;
-        -moz-transform: none !important;
-        -ms-transform: none !important;
-        -webkit-transform: none !important;
-        transform: none !important;
-        /*CSS animations*/
-        -webkit-animation: none !important;
-        -moz-animation: none !important;
-        -o-animation: none !important;
-        -ms-animation: none !important;
-        animation: none !important;
-  }
-  #h1-line{
-    visibility: hidden;
-  }
-}
-
 :root {
   --negro: #383838;
   --negro-claro: #424242;
   --naranja-claro-1: #ffe9d5;
-  --naranja-claro-2:#ffcfa2;
+  --naranja-claro-2: #ffcfa2;
   --naranja: #ff9a3c;
   --naranja-oscuro: #ff8009;
   --verde-claro-1: #b1e9de;
   --verde-claro-2: #89decd;
   --verde: #39c8ac;
   --verde-oscuro: #227968;
-  --violeta-claro:#c34dff;
-  --violeta: #8411FA;
+  --violeta-claro: #c34dff;
+  --violeta: #8411fa;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 section[id] {
   scroll-padding-top: 200px;
 }
 
-#h1-line{
+#h1-line {
   max-width: 70px;
   border: 3px solid var(--naranja);
   border-radius: 15px;
@@ -86,4 +61,29 @@ section[id] {
   color: #ff9a3c;
 }
 
-
+@media (min-width: 0px) and (max-width: 768px) {
+  [data-aos] {
+    /*CSS transitions*/
+    opacity: 1 !important;
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
+  #h1-line {
+    visibility: hidden;
+  }
+}

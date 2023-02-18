@@ -9,6 +9,10 @@
     font-weight: 800;
 }
 
+.logo{
+    width: 85px;
+}
+
 #hover-border{
     position: relative;
     color: white;
