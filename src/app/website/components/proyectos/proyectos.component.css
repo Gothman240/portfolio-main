@@ -17,7 +17,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     transition: .5s;
 }
 
@@ -28,7 +28,12 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    color: #000;
+    color: #fFf;
+}
+
+.textbox .cardbox h1{
+
+    font-weight: 700;
 }
 
 
@@ -54,6 +59,10 @@
     box-shadow: inset 0 0 0 0 var(--violeta);
     transition: ease-in-out 500ms;
 
+}
+
+.btnhover-white{
+    color: #fFf;
 }
 
 .btn{
