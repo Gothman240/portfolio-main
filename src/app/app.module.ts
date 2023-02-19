@@ -7,14 +7,14 @@ import { NavComponent } from './website/components/nav/nav.component';
 import { HeroComponent } from './website/components/hero/hero.component';
 import { AboutComponent } from './website/components/about/about.component';
 import { ExperienciaComponent } from './website/components/experiencia/experiencia.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { SkillsComponent } from './website/components/skills/skills.component';
 import { FooterComponent } from './website/components/footer/footer.component';
 import { MeComponent } from './website/components/me/me.component';
 import { HomeComponent } from './website/components/home/home.component';
-import { LoginComponent } from './website/components/login/login.component'
+import { LoginComponent } from './website/components/login/login.component';
 import { FormsModule } from '@angular/forms';
-import { interceptorProvider } from './service/interceptor-service';
+import { interceptorProvider, InterceptorService } from './service/interceptor-service';
 import { NewExperienciaComponent } from './website/components/experiencia/new-experiencia/new-experiencia.component';
 import { EditExpComponent } from './website/components/experiencia/edit-exp/edit-exp.component';
 import { EducacionComponent } from './website/components/educacion/educacion.component';
@@ -24,21 +24,21 @@ import { EditSkillComponent } from './website/components/skills/edit-skill/edit-
 import { NewSkillComponent } from './website/components/skills/new-skill/new-skill.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import {MatDialogModule} from '@angular/material/dialog'; 
+import { MatDialogModule } from '@angular/material/dialog';
 import { ToastrModule } from 'ngx-toastr';
 
 import { EditMeComponent } from './website/components/me/edit-me/edit-me.component';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 import { ProyectosComponent } from './website/components/proyectos/proyectos.component';
 import { NewProyectoComponent } from './website/components/proyectos/new-proyecto/new-proyecto.component';
 import { EditProyectoComponent } from './website/components/proyectos/edit-proyecto/edit-proyecto.component';
 import { RedesComponent } from './website/components/redes/redes.component';
 import { NewRedesComponent } from './website/components/redes/new-redes/new-redes.component';
 import { EditRedesComponent } from './website/components/redes/edit-redes/edit-redes.component';
-
-
+import { SpinnerComponent } from './website/components/spinner/spinner.component';
+import { SpinnerInterceptor } from './website/components/spinner/spinner.interceptor';
 
 @NgModule({
   declarations: [
@@ -66,7 +66,7 @@ import { EditRedesComponent } from './website/components/redes/edit-redes/edit-r
     RedesComponent,
     NewRedesComponent,
     EditRedesComponent,
-    
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
@@ -77,7 +77,7 @@ import { EditRedesComponent } from './website/components/redes/edit-redes/edit-r
     MatTooltipModule,
     MatDialogModule,
     ToastrModule.forRoot({
-      timeOut:5000,
+      timeOut: 5000,
       closeButton: false,
       progressBar: true,
     }),
@@ -85,8 +85,8 @@ import { EditRedesComponent } from './website/components/redes/edit-redes/edit-r
     provideStorage(() => getStorage()),
   ],
   providers: [
-    
+    {provide: HTTP_INTERCEPTORS, useClass: SpinnerInterceptor, multi: true }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
