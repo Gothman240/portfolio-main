@@ -63,42 +63,42 @@
       </div>
     </div>
   </div>
-</section>
-
-<!-- Modal -->
-<div
-  *ngIf="proyectoModal"
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+  <!-- Modal -->
   <div
-    class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down"
+    *ngIf="proyectoModal"
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
   >
-    <div class="modal-content text-center">
-      <img [src]="proyectoModal.imgP" class="d-block" loading="lazy" style="height: 350px" alt="imagen de proyecto del modal"/>
-      <div class="border-0">
-        <h1 class="modal-title fs-5 m-3 d-inline-block" id="exampleModalLabel">
-          {{ proyectoModal.nombre }}
-        </h1>
-        <button
-          type="button"
-          class="btn-close float-end p-3"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body">
-        {{ proyectoModal.descripcion }}
-      </div>
-      <div class="modal-footer m-auto">
-        <a class="btn btnhover" [href]="proyectoModal.gitLink" role="button"
-          ><i class="fa-brands fa-github"></i> Git</a
-        >
-        <a [href]="proyectoModal.link" target="_blank">Link</a>
+    <div
+      class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down"
+    >
+      <div class="modal-content text-center">
+        <img [src]="proyectoModal.imgP" class="d-block" loading="lazy" style="height: 350px" alt="imagen de proyecto del modal"/>
+        <div class="border-0">
+          <h1 class="modal-title fs-5 m-3 d-inline-block" id="exampleModalLabel">
+            {{ proyectoModal.nombre }}
+          </h1>
+          <button
+            type="button"
+            class="btn-close float-end p-3"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          {{ proyectoModal.descripcion }}
+        </div>
+        <div class="modal-footer m-auto">
+          <a class="btn btnhover" [href]="proyectoModal.gitLink" role="button"
+            ><i class="fa-brands fa-github"></i> Git</a
+          >
+          <a [href]="proyectoModal.link" target="_blank">Link</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
