@@ -1,5 +1,6 @@
+
 .time-line{
-    margin-right: 14px;
+    padding-right: 14px;
 }
 
 .bola{
@@ -17,6 +18,7 @@
     background-color: var(--violeta);
     transform: translate(6px, -7px);
 }
+
 
 @media (min-width: 0px) and (max-width: 768px) {
     .time-line-hide{
@@ -48,7 +50,7 @@
     
 }
 
-@media (min-width: 768px) and (max-width: 1400px) {
+@media (min-width: 768px) {
     .exp-row{
         display: flex;
     }
@@ -66,3 +68,4 @@
         display: none;
     }
 }
+

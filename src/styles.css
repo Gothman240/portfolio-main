@@ -84,6 +84,17 @@ section[id] {
     animation: none !important;
   }
 }
+@media (min-width:769px) and (max-width: 991px){
+  .container{
+      max-width: 585px!important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px){
+.container{
+  max-width: 790px!important;
+}
+}
 @media (min-width: 1200px){
   .container{
     max-width: 1000px;
