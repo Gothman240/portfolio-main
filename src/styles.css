@@ -23,6 +23,15 @@ section[id] {
   scroll-padding-top: 200px;
 }
 
+body::-webkit-scrollbar{
+  width: 7px; 
+}
+
+body::-webkit-scrollbar-thumb{
+  background: var(--naranja);
+  border-radius: 5px;
+}
+
 #h1-line {
   max-width: 70px;
   border: 3px solid var(--naranja);
